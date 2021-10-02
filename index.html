@@ -30,15 +30,26 @@
         </div>
     </div>
     <ul class="thumb">
-        <li><img src="./Pictures and logos/thumb1.png" alt=""></li>
-        <li><img src="./Pictures and logos/thumb2.png" alt=""></li>
-        <li><img src="./Pictures and logos/thumb3.png" alt=""></li>
+        <li><img src="./Pictures and logos/thumb1.png" onclick="imgSlider('./Pictures and logos/img1.png'); changeCircleColor('#017143')" ></li>
+        <li><img src="./Pictures and logos/thumb2.png" onclick="imgSlider('./Pictures and logos/img2.png'); changeCircleColor('#eb7495')"></li>
+        <li><img src="./Pictures and logos/thumb3.png" onclick="imgSlider('./Pictures and logos/img3.png'); changeCircleColor('#d752b1')"></li>
     </ul>
     <ul class="sci">
-        <li><a href="#"><img src="./Pictures and logos/facebook.png" alt=""></a></li>
-        <li><a href="#"><img src="./Pictures and logos/twitter.png" alt=""></a></li>
-        <li><a href="#"><img src="./Pictures and logos/instagram.png" alt=""></a></li>
+        <li><a href="#"><img src="./Pictures and logos/facebook.png"></a></li>
+        <li><a href="#"><img src="./Pictures and logos/twitter.png"></a></li>
+        <li><a href="#"><img src="./Pictures and logos/instagram.png"></a></li>
     </ul>
   </section>
+
+  <script src="index.js"></script>
+  <script type="text/javascript">
+      function imgSlider(anything){
+    document.querySelector(".starbucks").src = anything
+}
+    function changeCircleColor(color){
+        const circle = document.querySelector('.circle');
+        circle.style.background = color;
+    }
+  </script>
 </body>
 </html>
